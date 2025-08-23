@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View PDF</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PDF embedded full screen -->
+  <!-- <iframe src="Sample.pdf"></iframe> -->
+
+
+  <div id="qrcode"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "http://ohenemills.live/Sample.pdf", // Change this to your actual PDF link
+      width: 200,
+      height: 200
+    });
+  </script>
+
+  <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=http://localhost/Sample.pdf" alt="QR Code">
+
+
+</body>
+</html>
